@@ -3,8 +3,9 @@ window.addEventListener("DOMContentLoaded",function(){
     englishLanguage = document.querySelector(".siteEnglish"),
     russishLanguage = document.querySelector(".siteRussish"),
     slides = document.querySelectorAll(".about_slides img"),
-    buttonSwitchSlides = document.querySelector(".about_slides_switch");
-    console.log(slides);
+    buttonSwitchSlides = document.querySelector(".about_slides_switch"),
+    featuresItems = document.querySelectorAll(".features_container_item"),
+    featuresItemsText = document.querySelectorAll(".features_container_item_text");
     languageList.addEventListener("change",function(){
         if(this.value=="value2"){
             this.value == "value2";
@@ -37,5 +38,25 @@ window.addEventListener("DOMContentLoaded",function(){
         }
         showSlides();
     })
-   
+    featuresItems.forEach(item=>{
+        item.classList.add("modified");
+    })
+
+    featuresItemsText.forEach(item=>item.classList.add("hide"));
+    featuresItems.forEach((item,index)=>{
+        item.addEventListener("click",function(e){
+            if(e.target==item){
+              featuresItemsText[index].classList.remove("hide");
+              featuresItems[index].classList.remove("modified");
+              featuresItems[index].classList.add("modifiedcheck")
+              featuresItems[index].classList.add("show");
+            } else if(item.classList.contains("modifiedcheck")){
+                console.log(item)
+              featuresItemsText[index].classList.remove("show");
+              featuresItems[index].classList.remove("modifiedcheck");
+              featuresItems[index].classList.add("modified");
+              featuresItemsText[index].classList.add("hide");
+            }
+        })
+    })
 })
