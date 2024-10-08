@@ -45,18 +45,15 @@ window.addEventListener("DOMContentLoaded",function(){
     featuresItemsText.forEach(item=>item.classList.add("hide"));
     featuresItems.forEach((item,index)=>{
         item.addEventListener("click",function(e){
+            e.preventDefault();
             if(e.target==item){
-              featuresItemsText[index].classList.remove("hide");
-              featuresItems[index].classList.remove("modified");
-              featuresItems[index].classList.add("modifiedcheck")
-              featuresItems[index].classList.add("show");
-            } else if(item.classList.contains("modifiedcheck")){
-                console.log(item)
-              featuresItemsText[index].classList.remove("show");
-              featuresItems[index].classList.remove("modifiedcheck");
-              featuresItems[index].classList.add("modified");
-              featuresItemsText[index].classList.add("hide");
-            }
+              featuresItemsText[index].classList.toggle("hide");
+              featuresItems[index].classList.toggle("modified");
+              featuresItems[index].classList.toggle("modifiedcheck")
+              featuresItems[index].classList.toggle("show");
+            } 
         })
     })
+
+    
 })

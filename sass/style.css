@@ -293,4 +293,223 @@ body {
   left: -20px;
   cursor: pointer;
   margin-top: 5px;
+}
+
+.system {
+  min-height: 1000px;
+  transform: translateY(-151px);
+  background: url(/bg/systemReqBg.png);
+}
+.system_subheader {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 145px;
+  text-align: center;
+}
+.system_header {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+.system_req_container {
+  margin-top: 133px;
+  width: 600px;
+  height: 400px;
+  padding: 0;
+}
+.system_req_item {
+  width: 296px;
+  display: inline-block;
+  height: 150px;
+  margin-right: 1px;
+  margin-top: 1px;
+  border: #fff solid;
+  border-width: 0.5px;
+}
+.system_req_item_title {
+  color: #FFB548;
+  margin-left: 10px;
+}
+.system_req_item_text {
+  font-weight: 400;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.system_req_item_big {
+  width: 598px;
+  height: 150px;
+  border: #fff solid;
+  border-width: 0.5px;
+  margin-top: 1px;
+}
+.system_req_item_big_title {
+  color: #FFB548;
+  margin-left: 10px;
+}
+.system_req_item_big_text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.quotes {
+  min-height: 1000px;
+  background: url(/bg/quotesBg.jpg);
+  transform: translateY(-151px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quotes_text_container {
+  margin-top: 150px;
+  width: 440px;
+  height: 390px;
+}
+.quotes_text_container_subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+}
+.quotes_text_container_title {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+.quotes_text_container_info {
+  font-weight: 400;
+  margin-top: 100px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+.quotes_text_container_button {
+  width: 260px;
+  height: 60px;
+  background-color: #FFB548;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 37px;
+  transition: 0.5s;
+}
+.quotes_text_container_button:hover {
+  background: rgb(230, 190, 13);
+}
+.quotes_main_container {
+  display: block;
+  margin-left: 170px;
+  width: 500px;
+}
+.quotes_main_container_item {
+  width: 495px;
+  height: 182px;
+  margin-top: 30px;
+  background: rgb(31, 31, 31);
+  padding: 16px 14px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.quotes_main_container_item:hover {
+  box-shadow: 10px 5px 5px #FFB548;
+}
+.quotes_main_container_item_evan {
+  width: 495px;
+  height: 182px;
+  margin-top: 30px;
+  margin-left: 170px;
+  background: rgb(31, 31, 31);
+  padding: 16px 14px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.quotes_main_container_item_evan:hover {
+  box-shadow: 10px 5px 5px #FFB548;
+}
+.quotes_main_container_item_aaron {
+  width: 495px;
+  height: 182px;
+  margin-top: 30px;
+  margin-left: 150px;
+  background: rgb(31, 31, 31);
+  padding: 16px 14px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.quotes_main_container_item_aaron:hover {
+  box-shadow: 10px 5px 5px #FFB548;
+}
+.quotes_main_container_item_people {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  z-index: 3;
+  position: relative;
+}
+.quotes_main_container_item_circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  background: #FFB548;
+  position: absolute;
+  top: 18px;
+  left: 23px;
+  z-index: 2;
+}
+.quotes_main_container_item_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #FFB548;
+  display: inline-block;
+  margin-left: 30px;
+}
+.quotes_main_container_item_about {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  display: block;
+  color: rgba(255, 255, 255, 0.4745098039);
+  width: 150px;
+  position: absolute;
+  top: 53px;
+  left: 115px;
+}
+.quotes_main_container_item_twitter {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.quotes_main_container_item_text {
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 20px;
+}
+.quotes_main_container_item_date {
+  color: rgba(255, 255, 255, 0.4745098039);
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
