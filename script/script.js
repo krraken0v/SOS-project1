@@ -5,7 +5,12 @@ window.addEventListener("DOMContentLoaded",function(){
     slides = document.querySelectorAll(".about_slides img"),
     buttonSwitchSlides = document.querySelector(".about_slides_switch"),
     featuresItems = document.querySelectorAll(".features_container_item"),
-    featuresItemsText = document.querySelectorAll(".features_container_item_text");
+    featuresItemsText = document.querySelectorAll(".features_container_item_text"),
+    mainForm = document.querySelector(".form_text_container_input"),
+    buttonForm = document.querySelector(".form_text_container_button"),
+    modalBlock = document.querySelector(".modal_container"),
+    modalText = document.querySelector(".modal_container_item_text"),
+    modalExitButton = document.querySelector(".modal_container_item_exit");
     languageList.addEventListener("change",function(){
         if(this.value=="value2"){
             this.value == "value2";
@@ -54,6 +59,30 @@ window.addEventListener("DOMContentLoaded",function(){
             } 
         })
     })
-
-    
+    buttonForm.addEventListener("click",function(e){
+        e.preventDefault();
+        modalBlock.style.display ="block";
+        modalText.innerText = `Thank you for subscribtion!,
+        We will send you new updates to your e-mail address:
+        ${mainForm.value}
+        `
+    })
+    modalExitButton.addEventListener("click",function(e){
+        e.preventDefault();
+        modalBlock.style.display = "none";
+    })
+    function poster(input){
+        input.addEventListener("submit",function(e){
+            e.preventDefault();
+            const request = new XMLHttpRequest();
+            request.open("POST","server.php");
+            const newForm = new FormData(input);
+            request.send(newForm);
+            request.addEventListener("load",()=>{
+               console.log(request);
+            })
+            
+        })
+    }
+    poster(mainForm);
 })
